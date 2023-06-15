@@ -9,6 +9,19 @@
             let choice = Math.floor(Math.random() * 3 + 1);
             return choice === 1 ? "Rock" : choice === 2 ? "Paper" : "Scissors";
         }
+
+        function playRound(playerSelection, computerSelection) {
+            playerSelection = playerSelection.toLowerCase();
+            computerSelection = computerSelection.toLowerCase();
+            return (
+                (playerSelection === computerSelection) ? `It's a tie!` : 
+                (playerSelection === "rock" && computerSelection === "scissors") ? `You Win! ${playerSelection} beats ${computerSelection}` :
+                (playerSelection === "paper" && computerSelection === "rock") ? `You Win! ${playerSelection} beats ${computerSelection}` :
+                (playerSelection === "scissors" && computerSelection === "paper") ? `You Win! ${playerSelection} beats ${computerSelection}` :
+                `You Lose! ${computerSelection} beats ${playerSelection}`
+            );
+        }
+        //`You Lose! ${computerSelection} beats ${playerSelection}`
     </script>
 </head>
 <body>
