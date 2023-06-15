@@ -11,13 +11,13 @@
         }
 
         function playRound(playerSelection, computerSelection) {
-            playerSelection = playerSelection.toLowerCase();
-            computerSelection = computerSelection.toLowerCase();
+            playerSelection = playerSelection.slice(0, 1).toUpperCase() + playerSelection.slice(1).toLowerCase();
+            computerSelection = computerSelection.slice(0, 1).toUpperCase() + computerSelection.slice(1).toLowerCase();
             return (
                 (playerSelection === computerSelection) ? `It's a tie!` : 
-                (playerSelection === "rock" && computerSelection === "scissors") ? `You Win! ${playerSelection} beats ${computerSelection}` :
-                (playerSelection === "paper" && computerSelection === "rock") ? `You Win! ${playerSelection} beats ${computerSelection}` :
-                (playerSelection === "scissors" && computerSelection === "paper") ? `You Win! ${playerSelection} beats ${computerSelection}` :
+                (playerSelection === "Rock" && computerSelection === "Scissors") ? `You Win! ${playerSelection} beats ${computerSelection}` :
+                (playerSelection === "Paper" && computerSelection === "Rock") ? `You Win! ${playerSelection} beats ${computerSelection}` :
+                (playerSelection === "Scissors" && computerSelection === "Paper") ? `You Win! ${playerSelection} beats ${computerSelection}` :
                 `You Lose! ${computerSelection} beats ${playerSelection}`
             );
         }
