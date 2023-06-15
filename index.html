@@ -15,9 +15,7 @@
             computerSelection = computerSelection.slice(0, 1).toUpperCase() + computerSelection.slice(1).toLowerCase();
             return (
                 (playerSelection === computerSelection) ? `It's a tie!` : 
-                (playerSelection === "Rock" && computerSelection === "Scissors") ? `You Win! ${playerSelection} beats ${computerSelection}` :
-                (playerSelection === "Paper" && computerSelection === "Rock") ? `You Win! ${playerSelection} beats ${computerSelection}` :
-                (playerSelection === "Scissors" && computerSelection === "Paper") ? `You Win! ${playerSelection} beats ${computerSelection}` :
+                (playerSelection === "Rock" && computerSelection === "Scissors" || playerSelection === "Paper" && computerSelection === "Rock" || playerSelection === "Scissors" && computerSelection === "Paper") ? `You Win! ${playerSelection} beats ${computerSelection}` :
                 `You Lose! ${computerSelection} beats ${playerSelection}`
             );
         }
