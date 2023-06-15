@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script>
+        function getComputerChoice() {
+            let choice = Math.floor(Math.random() * 3 + 1);
+            return choice === 1 ? "Rock" : choice === 2 ? "Paper" : "Scissors";
+        }
+    </script>
 </head>
 <body>
     
