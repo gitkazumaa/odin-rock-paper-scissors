@@ -21,6 +21,13 @@
                 `You Lose! ${computerSelection} beats ${playerSelection}`
             );
         }
+        
+        function game() {
+            for (let i = 0; i < 5; i++) {
+                let userChoice = prompt("Choose Rock, Paper, or Scissors");
+                console.log(playRound(userChoice, getComputerChoice()));
+            }
+        }
         //`You Lose! ${computerSelection} beats ${playerSelection}`
     </script>
 </head>
